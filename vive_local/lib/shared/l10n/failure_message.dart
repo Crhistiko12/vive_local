@@ -16,6 +16,7 @@ extension AppFailureMessage on AppFailure {
     FailureCode.weatherNotConfigured => l10n.errorWeatherNotConfigured,
     FailureCode.weatherUnavailable => l10n.errorWeatherUnavailable,
     FailureCode.placeNotFound => l10n.errorPlaceNotFound,
+    FailureCode.photoUploadFailed => l10n.errorPhotoUpload,
     FailureCode.unknown => l10n.errorGeneric,
   };
 }

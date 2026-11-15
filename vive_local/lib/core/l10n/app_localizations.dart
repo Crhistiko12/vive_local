@@ -549,6 +549,42 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'La categoría es obligatoria'**
   String get placeCategoryRequired;
+
+  /// No description provided for @placePhotoLabel.
+  ///
+  /// In es, this message translates to:
+  /// **'Foto del lugar (opcional)'**
+  String get placePhotoLabel;
+
+  /// No description provided for @takePhoto.
+  ///
+  /// In es, this message translates to:
+  /// **'Tomar foto'**
+  String get takePhoto;
+
+  /// No description provided for @chooseFromGallery.
+  ///
+  /// In es, this message translates to:
+  /// **'Elegir de galería'**
+  String get chooseFromGallery;
+
+  /// No description provided for @removePhoto.
+  ///
+  /// In es, this message translates to:
+  /// **'Quitar foto'**
+  String get removePhoto;
+
+  /// No description provided for @errorPhotoPick.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo obtener la foto. Inténtalo de nuevo.'**
+  String get errorPhotoPick;
+
+  /// No description provided for @errorPhotoUpload.
+  ///
+  /// In es, this message translates to:
+  /// **'No se pudo subir la foto. Inténtalo de nuevo.'**
+  String get errorPhotoUpload;
 }
 
 class _AppLocalizationsDelegate

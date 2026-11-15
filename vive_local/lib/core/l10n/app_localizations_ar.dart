@@ -247,4 +247,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get placeCategoryRequired => 'الفئة مطلوبة';
+
+  @override
+  String get placePhotoLabel => 'صورة المكان (اختياري)';
+
+  @override
+  String get takePhoto => 'التقط صورة';
+
+  @override
+  String get chooseFromGallery => 'اختر من المعرض';
+
+  @override
+  String get removePhoto => 'إزالة الصورة';
+
+  @override
+  String get errorPhotoPick => 'تعذر الحصول على الصورة. حاول مرة أخرى.';
+
+  @override
+  String get errorPhotoUpload => 'تعذر رفع الصورة. حاول مرة أخرى.';
 }

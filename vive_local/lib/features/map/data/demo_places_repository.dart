@@ -99,6 +99,7 @@ class DemoPlacesRepository implements PlacesRepository {
     required String category,
     required double latitude,
     required double longitude,
+    String? photoUrl,
   }) {
     throw const AppFailure(FailureCode.firebaseNotConfigured);
   }

@@ -246,4 +246,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get placeCategoryRequired => 'Category is required';
+
+  @override
+  String get placePhotoLabel => 'Place photo (optional)';
+
+  @override
+  String get takePhoto => 'Take photo';
+
+  @override
+  String get chooseFromGallery => 'Choose from gallery';
+
+  @override
+  String get removePhoto => 'Remove photo';
+
+  @override
+  String get errorPhotoPick => 'Could not get the photo. Try again.';
+
+  @override
+  String get errorPhotoUpload => 'Could not upload the photo. Try again.';
 }

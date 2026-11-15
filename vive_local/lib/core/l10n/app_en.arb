@@ -105,5 +105,11 @@
   "placeCreated": "Place created successfully",
   "errorCreatePlace": "Could not create the place",
   "placeNameRequired": "Name is required",
-  "placeCategoryRequired": "Category is required"
+  "placeCategoryRequired": "Category is required",
+  "placePhotoLabel": "Place photo (optional)",
+  "takePhoto": "Take photo",
+  "chooseFromGallery": "Choose from gallery",
+  "removePhoto": "Remove photo",
+  "errorPhotoPick": "Could not get the photo. Try again.",
+  "errorPhotoUpload": "Could not upload the photo. Try again."
 }

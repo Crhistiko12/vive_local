@@ -27,6 +27,13 @@ void main() {
     );
 
     await tester.pumpAndSettle();
+
+    expect(find.text('Foto del lugar (opcional)'), findsOneWidget);
+    expect(find.text('Tomar foto'), findsOneWidget);
+    expect(find.text('Elegir de galería'), findsOneWidget);
+
+    await tester.ensureVisible(find.text('Guardar lugar'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('Guardar lugar'));
     await tester.pump();
 

@@ -115,5 +115,11 @@
   "placeCreated": "Lugar creado correctamente",
   "errorCreatePlace": "No se pudo crear el lugar",
   "placeNameRequired": "El nombre es obligatorio",
-  "placeCategoryRequired": "La categoría es obligatoria"
+  "placeCategoryRequired": "La categoría es obligatoria",
+  "placePhotoLabel": "Foto del lugar (opcional)",
+  "takePhoto": "Tomar foto",
+  "chooseFromGallery": "Elegir de galería",
+  "removePhoto": "Quitar foto",
+  "errorPhotoPick": "No se pudo obtener la foto. Inténtalo de nuevo.",
+  "errorPhotoUpload": "No se pudo subir la foto. Inténtalo de nuevo."
 }

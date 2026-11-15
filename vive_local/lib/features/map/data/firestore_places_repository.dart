@@ -37,7 +37,9 @@ class FirestorePlacesRepository implements PlacesRepository {
     required String category,
     required double latitude,
     required double longitude,
+    String? photoUrl,
   }) async {
+    final normalizedPhotoUrl = photoUrl?.trim();
     await _places.add({
       'name': name.trim(),
       'category': category.trim(),
@@ -45,6 +47,8 @@ class FirestorePlacesRepository implements PlacesRepository {
       'address': '',
       'rating': 0,
       'location': GeoPoint(latitude, longitude),
+      if (normalizedPhotoUrl != null && normalizedPhotoUrl.isNotEmpty)
+        'photoUrl': normalizedPhotoUrl,
       'createdAt': FieldValue.serverTimestamp(),
     });
   }

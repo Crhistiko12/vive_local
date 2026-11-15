@@ -42,10 +42,10 @@ class WelcomeScreen extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Container(
-                              padding: const EdgeInsets.all(32),
+                              width: 176,
+                              height: 176,
                               decoration: BoxDecoration(
-                                color: colors.primary,
-                                shape: BoxShape.circle,
+                                borderRadius: BorderRadius.circular(40),
                                 boxShadow: [
                                   BoxShadow(
                                     color: colors.primary.withValues(
@@ -56,10 +56,16 @@ class WelcomeScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              child: Icon(
-                                Icons.travel_explore,
-                                size: 80,
-                                color: colors.onPrimary,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(40),
+                                child: Image.asset(
+                                  'assets/images/logo.png',
+                                  width: 176,
+                                  height: 176,
+                                  fit: BoxFit.cover,
+                                  cacheWidth: 352,
+                                  semanticLabel: l10n.appTitle,
+                                ),
                               ),
                             ),
                             const SizedBox(height: 36),

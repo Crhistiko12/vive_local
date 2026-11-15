@@ -55,6 +55,53 @@ final class PlacesRepositoryProvider
 
 String _$placesRepositoryHash() => r'5a2fa0351d9b567f4950b0c6b597c63e5d8d4bae';
 
+@ProviderFor(placePhotoStorage)
+final placePhotoStorageProvider = PlacePhotoStorageProvider._();
+
+final class PlacePhotoStorageProvider
+    extends
+        $FunctionalProvider<
+          PlacePhotoStorage,
+          PlacePhotoStorage,
+          PlacePhotoStorage
+        >
+    with $Provider<PlacePhotoStorage> {
+  PlacePhotoStorageProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'placePhotoStorageProvider',
+        isAutoDispose: false,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$placePhotoStorageHash();
+
+  @$internal
+  @override
+  $ProviderElement<PlacePhotoStorage> $createElement(
+    $ProviderPointer pointer,
+  ) => $ProviderElement(pointer);
+
+  @override
+  PlacePhotoStorage create(Ref ref) {
+    return placePhotoStorage(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(PlacePhotoStorage value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<PlacePhotoStorage>(value),
+    );
+  }
+}
+
+String _$placePhotoStorageHash() => r'e5855583fd5958e4fa3b5ec2e3a964a00178a754';
+
 @ProviderFor(places)
 final placesProvider = PlacesProvider._();
 

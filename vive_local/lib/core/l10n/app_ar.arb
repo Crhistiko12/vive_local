@@ -105,5 +105,11 @@
   "placeCreated": "تم إنشاء المكان بنجاح",
   "errorCreatePlace": "تعذر إنشاء المكان",
   "placeNameRequired": "الاسم مطلوب",
-  "placeCategoryRequired": "الفئة مطلوبة"
+  "placeCategoryRequired": "الفئة مطلوبة",
+  "placePhotoLabel": "صورة المكان (اختياري)",
+  "takePhoto": "التقط صورة",
+  "chooseFromGallery": "اختر من المعرض",
+  "removePhoto": "إزالة الصورة",
+  "errorPhotoPick": "تعذر الحصول على الصورة. حاول مرة أخرى.",
+  "errorPhotoUpload": "تعذر رفع الصورة. حاول مرة أخرى."
 }

@@ -10,6 +10,7 @@ enum FailureCode {
   weatherNotConfigured,
   weatherUnavailable,
   placeNotFound,
+  photoUploadFailed,
   unknown,
 }
 

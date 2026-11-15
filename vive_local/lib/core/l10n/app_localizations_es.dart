@@ -248,4 +248,24 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get placeCategoryRequired => 'La categoría es obligatoria';
+
+  @override
+  String get placePhotoLabel => 'Foto del lugar (opcional)';
+
+  @override
+  String get takePhoto => 'Tomar foto';
+
+  @override
+  String get chooseFromGallery => 'Elegir de galería';
+
+  @override
+  String get removePhoto => 'Quitar foto';
+
+  @override
+  String get errorPhotoPick =>
+      'No se pudo obtener la foto. Inténtalo de nuevo.';
+
+  @override
+  String get errorPhotoUpload =>
+      'No se pudo subir la foto. Inténtalo de nuevo.';
 }

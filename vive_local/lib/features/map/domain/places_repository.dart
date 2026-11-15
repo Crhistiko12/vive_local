@@ -10,5 +10,6 @@ abstract interface class PlacesRepository {
     required String category,
     required double latitude,
     required double longitude,
+    String? photoUrl,
   });
 }
