@@ -112,7 +112,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorLocationUnavailable => 'Could not get your location';
 
   @override
-  String get errorWeatherNotConfigured => 'OpenWeather API key is missing';
+  String get errorWeatherNotConfigured => 'Weather service is unavailable';
 
   @override
   String get errorWeatherUnavailable => 'Weather is not available';
@@ -264,4 +264,32 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get errorPhotoUpload => 'Could not upload the photo. Try again.';
+
+  @override
+  String get galleryTitle => 'Photo gallery';
+
+  @override
+  String get noPhotosYet => 'No photos yet for this place';
+
+  @override
+  String get takePhotoWithCamera => 'Take photo with camera';
+
+  @override
+  String get localBadge => 'Local';
+
+  @override
+  String get webBadge => 'Web';
+
+  @override
+  String get photoSaved => 'Photo saved successfully';
+
+  @override
+  String get deletePhotoTitle => 'Delete photo?';
+
+  @override
+  String get deletePhotoConfirm =>
+      'Do you want to delete this photo from the gallery?';
+
+  @override
+  String get delete => 'Delete';
 }

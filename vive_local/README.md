@@ -45,7 +45,7 @@ lib/
 │   ├── auth/           # Google, email, biometría, JWT en secure storage
 │   ├── onboarding/     # bienvenida (welcome)
 │   ├── map/            # flutter_map, marcadores, Google Maps
-│   ├── places/         # detalle + clima OpenWeather
+│   ├── places/         # detalle + clima Open-Meteo
 │   ├── favorites/      # Drift reactivo (Sprint 2)
 │   ├── notifications/  # FCM (Sprint 2)
 │   ├── publish/        # publicación de lugares (Sprint 2)
@@ -72,7 +72,7 @@ lib/
 - [x] Creación de lugares desde el mapa (nombre + categoría + coordenadas
       actuales) persistida en la colección `lugares`.
 - [x] Botón "Abrir en Google Maps" (ruta por coordenadas, con fallback web).
-- [x] Clima OpenWeather con Dio + Retrofit.
+- [x] Clima Open-Meteo con Dio (sin API key).
 - [x] CI de GitHub Actions (`flutter analyze` + `flutter test`).
 - [x] i18n es/en/ar con soporte RTL.
 
@@ -109,15 +109,9 @@ SHA-1 registrado (debug):
 31:C3:6A:78:B6:13:9E:05:0C:CB:C4:54:4D:A2:DD:78:57:AD:D0:54
 ```
 
-## API key de OpenWeather
+## Clima Open-Meteo
 
-No hay secretos en el código. La key se inyecta en tiempo de compilación:
-
-```bash
-flutter run --dart-define=OPENWEATHER_API_KEY=tu_api_key
-```
-
-Sin key, el detalle de un lugar muestra el estado de error localizado.
+El clima actual se obtiene de Open-Meteo (API open source y gratuita sin necesidad de API key ni registro).
 
 ## Comandos
 

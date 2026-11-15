@@ -7,6 +7,7 @@ import '../../map/domain/place.dart';
 import '../../map/presentation/providers/places_providers.dart';
 import '../../map/presentation/widgets/google_maps_button.dart';
 import 'providers/weather_providers.dart';
+import 'widgets/place_photo_gallery.dart';
 import 'widgets/weather_panel.dart';
 
 class PlaceDetailScreen extends ConsumerWidget {
@@ -65,17 +66,13 @@ class _PlaceDetails extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.only(bottom: 24),
         children: [
-          if (place.hasPhoto)
-            Image.network(
-              place.photoUrl!,
-              height: 220,
-              width: double.infinity,
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) =>
-                  _CoverPlaceholder(place: place),
-            )
-          else
-            _CoverPlaceholder(place: place),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+            child: PlacePhotoGallery(
+              lugarId: place.id,
+              placeName: place.name,
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -141,36 +138,6 @@ class _PlaceDetails extends ConsumerWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _CoverPlaceholder extends StatelessWidget {
-  const _CoverPlaceholder({required this.place});
-
-  final Place place;
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      height: 200,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            colorScheme.primaryContainer,
-            colorScheme.secondaryContainer,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: Icon(
-        Icons.landscape_outlined,
-        size: 72,
-        color: colorScheme.onPrimaryContainer,
       ),
     );
   }

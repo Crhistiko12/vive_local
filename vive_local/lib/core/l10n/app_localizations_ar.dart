@@ -113,7 +113,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get errorLocationUnavailable => 'تعذر الحصول على موقعك';
 
   @override
-  String get errorWeatherNotConfigured => 'مفتاح OpenWeather غير موجود';
+  String get errorWeatherNotConfigured => 'خدمة الطقس غير متوفرة';
 
   @override
   String get errorWeatherUnavailable => 'الطقس غير متاح';
@@ -265,4 +265,31 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get errorPhotoUpload => 'تعذر رفع الصورة. حاول مرة أخرى.';
+
+  @override
+  String get galleryTitle => 'معرض الصور';
+
+  @override
+  String get noPhotosYet => 'لا توجد صور بعد لهذا المكان';
+
+  @override
+  String get takePhotoWithCamera => 'التقاط صورة بالكاميرا';
+
+  @override
+  String get localBadge => 'محلي';
+
+  @override
+  String get webBadge => 'ويب';
+
+  @override
+  String get photoSaved => 'تم حفظ الصورة بنجاح';
+
+  @override
+  String get deletePhotoTitle => 'حذف الصورة؟';
+
+  @override
+  String get deletePhotoConfirm => 'هل تريد حذف هذه الصورة من المعرض؟';
+
+  @override
+  String get delete => 'حذف';
 }

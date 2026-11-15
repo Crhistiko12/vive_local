@@ -1,28 +1,23 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../../configs/env.dart';
 import '../../../../core/l10n/locale_controller.dart';
 import '../../../../core/network/dio_client.dart';
-import '../../data/open_weather_repository.dart';
-import '../../data/weather_api.dart';
+import '../../../../core/services/weather_service.dart';
+import '../../data/open_meteo_weather_repository.dart';
 import '../../domain/weather.dart';
 import '../../domain/weather_repository.dart';
 
 part 'weather_providers.g.dart';
 
-final openWeatherApiKeyProvider = Provider<String>(
-  (ref) => AppEnv.openWeatherApiKey,
-);
+final weatherServiceProvider = Provider<WeatherService>((ref) {
+  return WeatherService(dio: ref.watch(dioProvider));
+});
 
 @Riverpod(keepAlive: true)
-WeatherApi weatherApi(Ref ref) => WeatherApi(ref.watch(dioProvider));
-
-@Riverpod(keepAlive: true)
-WeatherRepository weatherRepository(Ref ref) => OpenWeatherRepository(
-  ref.watch(weatherApiProvider),
-  ref.watch(openWeatherApiKeyProvider),
-);
+WeatherRepository weatherRepository(Ref ref) => OpenMeteoWeatherRepository(
+      ref.watch(weatherServiceProvider),
+    );
 
 @riverpod
 Future<Weather> placeWeather(

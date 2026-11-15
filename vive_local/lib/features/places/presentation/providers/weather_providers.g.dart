@@ -9,47 +9,6 @@ part of 'weather_providers.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(weatherApi)
-final weatherApiProvider = WeatherApiProvider._();
-
-final class WeatherApiProvider
-    extends $FunctionalProvider<WeatherApi, WeatherApi, WeatherApi>
-    with $Provider<WeatherApi> {
-  WeatherApiProvider._()
-    : super(
-        from: null,
-        argument: null,
-        retry: null,
-        name: r'weatherApiProvider',
-        isAutoDispose: false,
-        dependencies: null,
-        $allTransitiveDependencies: null,
-      );
-
-  @override
-  String debugGetCreateSourceHash() => _$weatherApiHash();
-
-  @$internal
-  @override
-  $ProviderElement<WeatherApi> $createElement($ProviderPointer pointer) =>
-      $ProviderElement(pointer);
-
-  @override
-  WeatherApi create(Ref ref) {
-    return weatherApi(ref);
-  }
-
-  /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(WeatherApi value) {
-    return $ProviderOverride(
-      origin: this,
-      providerOverride: $SyncValueProvider<WeatherApi>(value),
-    );
-  }
-}
-
-String _$weatherApiHash() => r'59b3a96e82dd35c3f085721f7e30fdaf4f51d064';
-
 @ProviderFor(weatherRepository)
 final weatherRepositoryProvider = WeatherRepositoryProvider._();
 

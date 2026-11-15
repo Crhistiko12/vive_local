@@ -33,7 +33,7 @@
   "errorLocationPermission": "تم رفض إذن الموقع",
   "errorLocationDisabled": "خدمة الموقع في الجهاز غير مفعّلة",
   "errorLocationUnavailable": "تعذر الحصول على موقعك",
-  "errorWeatherNotConfigured": "مفتاح OpenWeather غير موجود",
+  "errorWeatherNotConfigured": "خدمة الطقس غير متوفرة",
   "errorWeatherUnavailable": "الطقس غير متاح",
   "errorNetwork": "تحقق من اتصالك بالإنترنت",
   "errorPlaceNotFound": "لم نجد هذا المكان",
@@ -111,5 +111,14 @@
   "chooseFromGallery": "اختر من المعرض",
   "removePhoto": "إزالة الصورة",
   "errorPhotoPick": "تعذر الحصول على الصورة. حاول مرة أخرى.",
-  "errorPhotoUpload": "تعذر رفع الصورة. حاول مرة أخرى."
+  "errorPhotoUpload": "تعذر رفع الصورة. حاول مرة أخرى.",
+  "galleryTitle": "معرض الصور",
+  "noPhotosYet": "لا توجد صور بعد لهذا المكان",
+  "takePhotoWithCamera": "التقاط صورة بالكاميرا",
+  "localBadge": "محلي",
+  "webBadge": "ويب",
+  "photoSaved": "تم حفظ الصورة بنجاح",
+  "deletePhotoTitle": "حذف الصورة؟",
+  "deletePhotoConfirm": "هل تريد حذف هذه الصورة من المعرض؟",
+  "delete": "حذف"
 }

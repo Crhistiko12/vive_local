@@ -1,8 +1,8 @@
-import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
-import '../../../../configs/env.dart';
 import '../../../../core/l10n/app_localizations.dart';
+import '../../../../core/services/weather_service.dart';
 import '../../../../shared/l10n/failure_message.dart';
 import '../../domain/weather.dart';
 
@@ -49,43 +49,55 @@ class WeatherPanel extends StatelessWidget {
                     ),
                 ],
               ),
-              data: (weather) => Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.network(
-                    '${AppEnv.openWeatherIconUrl}/${weather.iconCode}@2x.png',
-                    width: 64,
-                    height: 64,
-                    errorBuilder: (context, error, stackTrace) =>
-                        const Icon(Icons.cloud, size: 40),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '${weather.temperatureLabel} · '
-                          '${weather.description}',
-                          style: theme.textTheme.titleLarge,
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          l10n.weatherFeelsLike(
-                            weather.feelsLike.round().toString(),
-                          ),
-                          style: theme.textTheme.bodyMedium,
-                        ),
-                        Text(
-                          '${l10n.weatherHumidity('${weather.humidity}')} · '
-                          '${l10n.weatherWind(weather.windSpeed.toStringAsFixed(1))}',
-                          style: theme.textTheme.bodySmall,
-                        ),
-                      ],
+              data: (weather) {
+                final code = int.tryParse(weather.iconCode);
+                final icon = WeatherService.getWeatherIcon(code);
+
+                return Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 56,
+                      height: 56,
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.primaryContainer,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      alignment: Alignment.center,
+                      child: Icon(
+                        icon,
+                        size: 32,
+                        color: theme.colorScheme.onPrimaryContainer,
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${weather.temperatureLabel} · '
+                            '${weather.description}',
+                            style: theme.textTheme.titleLarge,
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            l10n.weatherFeelsLike(
+                              weather.feelsLike.round().toString(),
+                            ),
+                            style: theme.textTheme.bodyMedium,
+                          ),
+                          Text(
+                            '${l10n.weatherHumidity('${weather.humidity}')} · '
+                            '${l10n.weatherWind(weather.windSpeed.toStringAsFixed(1))}',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                );
+              },
             ),
           ],
         ),

@@ -17,6 +17,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'La plaza principal de Cochabamba, rodeada por la Catedral '
           'Metropolitana y el Palacio de Justicia.',
       rating: 4.7,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/8/8e/Catedral_metropolitana_de_Cochabamba_03.jpg',
     ),
     Place(
       id: 'cristo-de-la-concordia',
@@ -29,6 +31,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'Monumento de 33 metros sobre el cerro San Pedro con vista '
           'panorámica de toda la ciudad.',
       rating: 4.8,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/5/54/Cristo_de_la_Concordia_02.jpg',
     ),
     Place(
       id: 'aeropuerto-jorge-wilstermann',
@@ -41,6 +45,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'Principal aeropuerto de Cochabamba, con vuelos nacionales e '
           'internacionales.',
       rating: 4.2,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/5/59/Jorge_Wilstermann_Airport_at_dusk.jpg',
     ),
     Place(
       id: 'terminal-de-buses-cochabamba',
@@ -53,6 +59,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'Terminal de larga distancia que conecta Cochabamba con todo '
           'el país.',
       rating: 4.0,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/d/de/Cocha_Noche.jpg',
     ),
     Place(
       id: 'palacio-portales',
@@ -65,6 +73,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'Residencia histórica del magnate del estaño Simón Patiño, hoy '
           'centro cultural y museo.',
       rating: 4.7,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/9/92/Palacio_portales_perspectiva_exterior.jpg',
     ),
     Place(
       id: 'teleferico-al-cristo',
@@ -77,6 +87,8 @@ class DemoPlacesRepository implements PlacesRepository {
           'Estación base del teleférico que sube al Cristo de la '
           'Concordia.',
       rating: 4.6,
+      photoUrl:
+          'https://upload.wikimedia.org/wikipedia/commons/1/1d/Cala_Cala%2C_Cochabamba_2.jpg',
     ),
   ];
 

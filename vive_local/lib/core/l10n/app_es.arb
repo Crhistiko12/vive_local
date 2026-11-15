@@ -33,7 +33,7 @@
   "errorLocationPermission": "Permiso de ubicación denegado",
   "errorLocationDisabled": "La ubicación del dispositivo está desactivada",
   "errorLocationUnavailable": "No se pudo obtener tu ubicación",
-  "errorWeatherNotConfigured": "Falta la API key de OpenWeather",
+  "errorWeatherNotConfigured": "El servicio de clima no está disponible",
   "errorWeatherUnavailable": "El clima no está disponible",
   "errorNetwork": "Revisa tu conexión a internet",
   "errorPlaceNotFound": "No encontramos este lugar",
@@ -121,5 +121,14 @@
   "chooseFromGallery": "Elegir de galería",
   "removePhoto": "Quitar foto",
   "errorPhotoPick": "No se pudo obtener la foto. Inténtalo de nuevo.",
-  "errorPhotoUpload": "No se pudo subir la foto. Inténtalo de nuevo."
+  "errorPhotoUpload": "No se pudo subir la foto. Inténtalo de nuevo.",
+  "galleryTitle": "Galería de fotos",
+  "noPhotosYet": "Aún no hay fotos para este lugar",
+  "takePhotoWithCamera": "Tomar foto con la cámara",
+  "localBadge": "Local",
+  "webBadge": "Web",
+  "photoSaved": "Foto guardada correctamente",
+  "deletePhotoTitle": "¿Eliminar foto?",
+  "deletePhotoConfirm": "¿Deseas eliminar esta foto de la galería?",
+  "delete": "Eliminar"
 }

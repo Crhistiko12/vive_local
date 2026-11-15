@@ -301,7 +301,7 @@ abstract class AppLocalizations {
   /// No description provided for @errorWeatherNotConfigured.
   ///
   /// In es, this message translates to:
-  /// **'Falta la API key de OpenWeather'**
+  /// **'El servicio de clima no está disponible'**
   String get errorWeatherNotConfigured;
 
   /// No description provided for @errorWeatherUnavailable.
@@ -585,6 +585,60 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'No se pudo subir la foto. Inténtalo de nuevo.'**
   String get errorPhotoUpload;
+
+  /// No description provided for @galleryTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Galería de fotos'**
+  String get galleryTitle;
+
+  /// No description provided for @noPhotosYet.
+  ///
+  /// In es, this message translates to:
+  /// **'Aún no hay fotos para este lugar'**
+  String get noPhotosYet;
+
+  /// No description provided for @takePhotoWithCamera.
+  ///
+  /// In es, this message translates to:
+  /// **'Tomar foto con la cámara'**
+  String get takePhotoWithCamera;
+
+  /// No description provided for @localBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Local'**
+  String get localBadge;
+
+  /// No description provided for @webBadge.
+  ///
+  /// In es, this message translates to:
+  /// **'Web'**
+  String get webBadge;
+
+  /// No description provided for @photoSaved.
+  ///
+  /// In es, this message translates to:
+  /// **'Foto guardada correctamente'**
+  String get photoSaved;
+
+  /// No description provided for @deletePhotoTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Eliminar foto?'**
+  String get deletePhotoTitle;
+
+  /// No description provided for @deletePhotoConfirm.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Deseas eliminar esta foto de la galería?'**
+  String get deletePhotoConfirm;
+
+  /// No description provided for @delete.
+  ///
+  /// In es, this message translates to:
+  /// **'Eliminar'**
+  String get delete;
 }
 
 class _AppLocalizationsDelegate

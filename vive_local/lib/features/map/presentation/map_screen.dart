@@ -13,6 +13,7 @@ import '../../../routes/app_routes.dart';
 import '../../../shared/l10n/failure_message.dart';
 import '../../../shared/widgets/language_menu_button.dart';
 import '../../auth/presentation/providers/auth_providers.dart';
+import '../../places/presentation/widgets/place_detail_sheet.dart';
 import '../domain/place.dart';
 import 'providers/places_providers.dart';
 import 'providers/selected_place_controller.dart';
@@ -65,6 +66,17 @@ class _MapScreenState extends ConsumerState<MapScreen> {
         SnackBar(content: Text(failure.message(l10n))),
       );
     }
+  }
+
+  Future<void> _openPlaceDetailsSheet(Place place) async {
+    ref.read(selectedPlaceControllerProvider.notifier).select(place.id);
+    await showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      showDragHandle: true,
+      builder: (_) => PlaceDetailSheet(place: place),
+    );
   }
 
   Future<void> _openCreatePlaceSheet() async {
@@ -232,9 +244,7 @@ class _MapScreenState extends ConsumerState<MapScreen> {
                         label: place.name,
                         button: true,
                         child: GestureDetector(
-                          onTap: () => ref
-                              .read(selectedPlaceControllerProvider.notifier)
-                              .select(place.id),
+                          onTap: () => _openPlaceDetailsSheet(place),
                           child: Icon(
                             Icons.location_on,
                             size: 44,
