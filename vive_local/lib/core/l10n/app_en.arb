@@ -1,0 +1,105 @@
+{
+  "@@locale": "en",
+  "appTitle": "ViveLocal",
+  "appTagline": "Discover your city, live your neighborhood",
+  "mapTitle": "Map",
+  "profileTitle": "Profile",
+  "loginTitle": "Sign in",
+  "loginSubtitle": "Save favorites, publish places and get alerts about nearby events.",
+  "orDivider": "or",
+  "signInWithGoogle": "Continue with Google",
+  "signInWithEmail": "Sign in with email",
+  "registerWithEmail": "Create account",
+  "createAccountTitle": "Create an account",
+  "emailLabel": "Email",
+  "passwordLabel": "Password",
+  "nameLabel": "Name",
+  "signOut": "Sign out",
+  "guest": "Guest",
+  "notSignedIn": "You are not signed in",
+  "loading": "Loading…",
+  "retry": "Retry",
+  "cancel": "Cancel",
+  "close": "Close",
+  "errorGeneric": "An unexpected error occurred",
+  "errorFirebaseNotConfigured": "Firebase is not configured. Run flutterfire configure.",
+  "errorAuthCancelled": "Sign in cancelled",
+  "errorAuthFailed": "Could not sign in",
+  "errorInvalidCredentials": "Wrong email or password",
+  "errorLocationPermission": "Location permission denied",
+  "errorLocationDisabled": "Device location is disabled",
+  "errorLocationUnavailable": "Could not get your location",
+  "errorWeatherNotConfigured": "OpenWeather API key is missing",
+  "errorWeatherUnavailable": "Weather is not available",
+  "errorNetwork": "Check your internet connection",
+  "errorPlaceNotFound": "We could not find this place",
+  "myLocation": "My location",
+  "openInGoogleMaps": "Open in Google Maps",
+  "googleMapsNotAvailable": "Could not open Google Maps",
+  "placeDetailsTitle": "Place details",
+  "weatherTitle": "Weather",
+  "weatherFeelsLike": "Feels like {temp}°",
+  "@weatherFeelsLike": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherHumidity": "Humidity {value}%",
+  "@weatherHumidity": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherWind": "Wind {value} m/s",
+  "@weatherWind": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "noPlaces": "No places nearby yet",
+  "placesLoadError": "Could not load places",
+  "demoModeBanner": "Demo mode: Firebase is not connected yet",
+  "viewDetails": "View details",
+  "language": "Language",
+  "systemLanguage": "System language",
+  "spanish": "Spanish",
+  "english": "English",
+  "arabic": "Arabic",
+  "emailRequired": "Email is required",
+  "passwordRequired": "Password is required",
+  "invalidEmail": "Invalid email",
+  "noAccountRegister": "No account? Create one",
+  "alreadyHaveAccount": "Already have an account? Sign in",
+  "unlockWithBiometrics": "Unlock with fingerprint",
+  "favoritesTitle": "Favorites",
+  "publishTitle": "Publish",
+  "notificationsTitle": "Notifications",
+  "coordinatesLabel": "{lat}, {lng}",
+  "@coordinatesLabel": {
+    "placeholders": {
+      "lat": {
+        "type": "String"
+      },
+      "lng": {
+        "type": "String"
+      }
+    }
+  },
+  "addPlace": "Add place",
+  "createPlaceTitle": "New place",
+  "placeNameLabel": "Place name",
+  "placeCategoryLabel": "Category",
+  "placeLocationHint": "Location: {lat}, {lng}",
+  "usingMapCenter": "No current location: using the map center",
+  "savePlace": "Save place",
+  "placeCreated": "Place created successfully",
+  "errorCreatePlace": "Could not create the place",
+  "placeNameRequired": "Name is required",
+  "placeCategoryRequired": "Category is required"
+}

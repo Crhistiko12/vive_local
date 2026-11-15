@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "394453119083",
+    "project_id": "vivelocal-dd59b",
+    "storage_bucket": "vivelocal-dd59b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394453119083:android:7ef4f3761e96d4575a812e",
+        "android_client_info": {
+          "package_name": "com.vivelocal.vive_local"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394453119083-fh0ib3pkat5otdb7qk153chad6ef5iig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vivelocal.vive_local",
+            "certificate_hash": "31c36a78b6139e050ccbc4544da2dd7857add054"
+          }
+        },
+        {
+          "client_id": "394453119083-3i344p0f3fj9i4as0im93tjab2jl435l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrksMIF2vegpeyEvSiJi4v2qWZ44QGCng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394453119083-3i344p0f3fj9i4as0im93tjab2jl435l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "394453119083-19ks237goeku0hcenqbfrs5f4fe0uapq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.vivelocal.viveLocal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

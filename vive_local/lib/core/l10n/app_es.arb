@@ -1,0 +1,115 @@
+{
+  "@@locale": "es",
+  "appTitle": "ViveLocal",
+  "appTagline": "Descubre tu ciudad, vive tu barrio",
+  "mapTitle": "Mapa",
+  "profileTitle": "Perfil",
+  "loginTitle": "Inicia sesión",
+  "loginSubtitle": "Guarda favoritos, publica lugares y recibe avisos de eventos cercanos.",
+  "orDivider": "o",
+  "signInWithGoogle": "Continuar con Google",
+  "signInWithEmail": "Iniciar sesión con correo",
+  "registerWithEmail": "Crear cuenta",
+  "createAccountTitle": "Crear una cuenta",
+  "emailLabel": "Correo electrónico",
+  "passwordLabel": "Contraseña",
+  "nameLabel": "Nombre",
+  "signOut": "Cerrar sesión",
+  "guest": "Invitado",
+  "notSignedIn": "No has iniciado sesión",
+  "loading": "Cargando…",
+  "retry": "Reintentar",
+  "cancel": "Cancelar",
+  "close": "Cerrar",
+  "errorGeneric": "Ocurrió un error inesperado",
+  "errorFirebaseNotConfigured": "Firebase no está configurado. Ejecuta flutterfire configure.",
+  "errorAuthCancelled": "Inicio de sesión cancelado",
+  "errorAuthFailed": "No se pudo iniciar sesión",
+  "errorInvalidCredentials": "Correo o contraseña incorrectos",
+  "errorLocationPermission": "Permiso de ubicación denegado",
+  "errorLocationDisabled": "La ubicación del dispositivo está desactivada",
+  "errorLocationUnavailable": "No se pudo obtener tu ubicación",
+  "errorWeatherNotConfigured": "Falta la API key de OpenWeather",
+  "errorWeatherUnavailable": "El clima no está disponible",
+  "errorNetwork": "Revisa tu conexión a internet",
+  "errorPlaceNotFound": "No encontramos este lugar",
+  "myLocation": "Mi ubicación",
+  "openInGoogleMaps": "Abrir en Google Maps",
+  "googleMapsNotAvailable": "No se pudo abrir Google Maps",
+  "placeDetailsTitle": "Detalles del lugar",
+  "weatherTitle": "Clima",
+  "weatherFeelsLike": "Sensación {temp}°",
+  "@weatherFeelsLike": {
+    "placeholders": {
+      "temp": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherHumidity": "Humedad {value}%",
+  "@weatherHumidity": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "weatherWind": "Viento {value} m/s",
+  "@weatherWind": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "noPlaces": "Aún no hay lugares cerca",
+  "placesLoadError": "No se pudieron cargar los lugares",
+  "demoModeBanner": "Modo demo: Firebase aún no está conectado",
+  "viewDetails": "Ver detalles",
+  "language": "Idioma",
+  "systemLanguage": "Idioma del sistema",
+  "spanish": "Español",
+  "english": "Inglés",
+  "arabic": "Árabe",
+  "emailRequired": "El correo es obligatorio",
+  "passwordRequired": "La contraseña es obligatoria",
+  "invalidEmail": "Correo no válido",
+  "noAccountRegister": "¿No tienes cuenta? Crear una",
+  "alreadyHaveAccount": "¿Ya tienes cuenta? Inicia sesión",
+  "unlockWithBiometrics": "Desbloquear con huella",
+  "favoritesTitle": "Favoritos",
+  "publishTitle": "Publicar",
+  "notificationsTitle": "Notificaciones",
+  "coordinatesLabel": "{lat}, {lng}",
+  "@coordinatesLabel": {
+    "placeholders": {
+      "lat": {
+        "type": "String"
+      },
+      "lng": {
+        "type": "String"
+      }
+    }
+  },
+  "addPlace": "Añadir lugar",
+  "createPlaceTitle": "Nuevo lugar",
+  "placeNameLabel": "Nombre del lugar",
+  "placeCategoryLabel": "Categoría",
+  "placeLocationHint": "Ubicación: {lat}, {lng}",
+  "@placeLocationHint": {
+    "placeholders": {
+      "lat": {
+        "type": "String"
+      },
+      "lng": {
+        "type": "String"
+      }
+    }
+  },
+  "usingMapCenter": "Sin ubicación actual: se usará el centro del mapa",
+  "savePlace": "Guardar lugar",
+  "placeCreated": "Lugar creado correctamente",
+  "errorCreatePlace": "No se pudo crear el lugar",
+  "placeNameRequired": "El nombre es obligatorio",
+  "placeCategoryRequired": "La categoría es obligatoria"
+}
