@@ -12,6 +12,7 @@ import '../../../core/location/location_service.dart';
 import '../../../routes/app_routes.dart';
 import '../../../shared/l10n/failure_message.dart';
 import '../../../shared/widgets/language_menu_button.dart';
+import '../../auth/presentation/providers/auth_providers.dart';
 import '../domain/place.dart';
 import 'providers/places_providers.dart';
 import 'providers/selected_place_controller.dart';
@@ -93,6 +94,42 @@ class _MapScreenState extends ConsumerState<MapScreen> {
     );
   }
 
+  Future<void> _confirmSignOut() async {
+    final l10n = AppLocalizations.of(context);
+    final router = GoRouter.of(context);
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(l10n.signOut),
+        content: Text(l10n.signOutConfirmation),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(dialogContext).pop(false),
+            child: Text(l10n.cancel),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.of(dialogContext).pop(true),
+            child: Text(l10n.signOut),
+          ),
+        ],
+      ),
+    );
+    if (confirmed != true) {
+      return;
+    }
+    try {
+      await ref.read(authRepositoryProvider).signOut();
+      router.go(AppRoutes.login);
+    } catch (error) {
+      if (!mounted) {
+        return;
+      }
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(failureMessage(context, error))),
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
@@ -121,6 +158,11 @@ class _MapScreenState extends ConsumerState<MapScreen> {
             tooltip: l10n.profileTitle,
             onPressed: () => context.push(AppRoutes.profile),
             icon: const Icon(Icons.person_outline),
+          ),
+          IconButton(
+            tooltip: l10n.signOut,
+            onPressed: _confirmSignOut,
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),

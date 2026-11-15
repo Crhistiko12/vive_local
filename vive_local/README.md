@@ -6,7 +6,9 @@ App móvil de descubrimiento de lugares y eventos locales (turismo + vida de bar
 - **Navegación externa**: botón "Abrir en Google Maps" (ruta por
   `https://www.google.com/maps/dir/`, abre la app o la versión web).
 - **Backend**: Firebase (Firestore, Storage, Auth, Analytics, Crashlytics, FCM).
-- **Auth**: Google Sign-In, email/contraseña y biometría. Sin Facebook Login.
+- **Auth obligatoria**: onboarding, login obligatorio y rutas protegidas con
+  GoRouter; logout con confirmación. Google, email/contraseña y biometría. Sin
+  Facebook Login.
 - **Offline**: Drift/SQLite para favoritos y reseñas (base creada).
 - **i18n**: español, inglés y árabe (RTL).
 
@@ -41,6 +43,7 @@ lib/
 ├── core/               # database (Drift), network (Dio), l10n, theme, logging, location
 ├── features/
 │   ├── auth/           # Google, email, biometría, JWT en secure storage
+│   ├── onboarding/     # bienvenida (welcome)
 │   ├── map/            # flutter_map, marcadores, Google Maps
 │   ├── places/         # detalle + clima OpenWeather
 │   ├── favorites/      # Drift reactivo (Sprint 2)
@@ -56,7 +59,12 @@ lib/
 - [x] Firestore creado, reglas desplegadas (`firestore.rules`) y colección
       `lugares` con 6 sitios de Cochabamba.
 - [x] SHA-1 de debug registrado en la app Android de Firebase.
-- [x] Google Sign-In implementado (pendiente inicializar Authentication en Console).
+- [x] Google Sign-In habilitado en Firebase (proveedor Google activo).
+- [x] Onboarding de bienvenida (`/welcome`) y login obligatorio (`/login`).
+- [x] Rutas protegidas con GoRouter: `/map`, `/map/place/:id` y `/profile`
+      redirigen a `/welcome` sin sesión; con sesión se salta el onboarding.
+- [x] Logout desde el mapa con diálogo de confirmación; regresa a `/login` y no
+      permite volver al mapa.
 - [x] Mapa centrado en Cochabamba (Plaza 14 de Septiembre) con OpenStreetMap y
       marcadores desde Firestore (demo local si Firebase falla).
 - [x] Geolocalización: pide permiso al abrir y centra en la ubicación real si se
@@ -79,21 +87,21 @@ lib/
 | Palacio Portales | Cultura | -17.3747965, -66.1530795 |
 | Teleférico al Cristo (base) | Transporte | -17.3889881, -66.1421193 |
 
-## Configuración pendiente (una sola vez)
+## Firebase Authentication
 
-1. **Firebase Console → Authentication → Comenzar** (el API de Identity Platform
-   exige facturación; la consola habilita Auth en el plan Spark).
-2. Activar el proveedor **Google**.
-3. Volver a ejecutar para refrescar `google-services.json`, el plist de iOS y
-   `firebase_options.dart` con los client IDs de OAuth:
+- Identity Platform/Auth ya está inicializado en la consola y el proveedor
+  **Google** está activo.
+- `android/app/google-services.json` incluye los OAuth clients y la app Android
+  funciona con Google Sign-In.
+- Para compilar iOS con Google Sign-In, volver a ejecutar FlutterFire para
+  refrescar `GoogleService-Info.plist` con el `CLIENT_ID`:
 
-   ```bash
-   flutterfire configure -p vivelocal-dd59b --platforms=android,ios -y
-   ```
+  ```bash
+  flutterfire configure -p vivelocal-dd59b --platforms=android,ios -y
+  ```
 
-4. (Opcional) Probar "Abrir en Google Maps" en un dispositivo con Google Maps
-   instalado para validar la app externa (sin la app usa la versión web). El APK
-   debug ya compila.
+- (Opcional) Probar "Abrir en Google Maps" en un dispositivo con Google Maps
+  instalado para validar la app externa (sin la app usa la versión web).
 
 SHA-1 registrado (debug):
 
@@ -127,6 +135,7 @@ flutter build apk --debug
 ## Tests
 
 - URI de Google Maps y lanzamiento desde el botón.
+- Redirecciones de autenticación (`resolveAuthRedirect`) y onboarding.
 - Modelo de dominio `Place` y catálogo demo de Cochabamba.
 - `CreatePlaceController` (éxito y error) y validación del formulario de creación.
 - `AuthUser`.

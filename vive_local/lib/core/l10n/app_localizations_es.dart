@@ -29,6 +29,19 @@ class AppLocalizationsEs extends AppLocalizations {
       'Guarda favoritos, publica lugares y recibe avisos de eventos cercanos.';
 
   @override
+  String get welcomeTitle => 'Bienvenido a ViveLocal';
+
+  @override
+  String get welcomeSubtitle =>
+      'Descubre los mejores lugares de Cochabamba, compártelos con la comunidad y guárdalos para visitarlos cuando quieras.';
+
+  @override
+  String get getStarted => 'Comenzar';
+
+  @override
+  String get signOutConfirmation => '¿Seguro que quieres cerrar sesión?';
+
+  @override
   String get orDivider => 'o';
 
   @override

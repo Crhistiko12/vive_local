@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../../configs/providers.dart';
 import '../../../core/l10n/app_localizations.dart';
@@ -30,11 +29,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   }
 
   Future<void> _signInWithGoogle() async {
-    final controller = ref.read(signInControllerProvider.notifier);
-    await controller.signInWithGoogle();
-    if (mounted) {
-      _handleResult();
-    }
+    await ref
+        .read(signInControllerProvider.notifier)
+        .signInWithGoogle();
   }
 
   Future<void> _submitWithEmail() async {
@@ -55,24 +52,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         password: _passwordController.text,
       );
     }
-
-    if (mounted) {
-      _handleResult();
-    }
-  }
-
-  void _handleResult() {
-    final state = ref.read(signInControllerProvider);
-    final error = state.error;
-    if (error != null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(failureMessage(context, error))),
-      );
-      return;
-    }
-    if (!state.hasError && !state.isLoading && context.canPop()) {
-      context.pop();
-    }
   }
 
   @override
@@ -84,7 +63,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     final isLoading = signInState.isLoading;
 
     return Scaffold(
-      appBar: AppBar(title: Text(l10n.loginTitle)),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: Text(l10n.loginTitle),
+      ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(

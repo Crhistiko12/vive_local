@@ -136,6 +136,30 @@ abstract class AppLocalizations {
   /// **'Guarda favoritos, publica lugares y recibe avisos de eventos cercanos.'**
   String get loginSubtitle;
 
+  /// No description provided for @welcomeTitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Bienvenido a ViveLocal'**
+  String get welcomeTitle;
+
+  /// No description provided for @welcomeSubtitle.
+  ///
+  /// In es, this message translates to:
+  /// **'Descubre los mejores lugares de Cochabamba, compártelos con la comunidad y guárdalos para visitarlos cuando quieras.'**
+  String get welcomeSubtitle;
+
+  /// No description provided for @getStarted.
+  ///
+  /// In es, this message translates to:
+  /// **'Comenzar'**
+  String get getStarted;
+
+  /// No description provided for @signOutConfirmation.
+  ///
+  /// In es, this message translates to:
+  /// **'¿Seguro que quieres cerrar sesión?'**
+  String get signOutConfirmation;
+
   /// No description provided for @orDivider.
   ///
   /// In es, this message translates to:

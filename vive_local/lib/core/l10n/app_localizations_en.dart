@@ -29,6 +29,19 @@ class AppLocalizationsEn extends AppLocalizations {
       'Save favorites, publish places and get alerts about nearby events.';
 
   @override
+  String get welcomeTitle => 'Welcome to ViveLocal';
+
+  @override
+  String get welcomeSubtitle =>
+      'Discover the best places in Cochabamba, share them with the community and save them to visit whenever you want.';
+
+  @override
+  String get getStarted => 'Get started';
+
+  @override
+  String get signOutConfirmation => 'Are you sure you want to sign out?';
+
+  @override
   String get orDivider => 'or';
 
   @override

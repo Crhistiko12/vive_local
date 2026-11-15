@@ -9,7 +9,6 @@ import '../../../routes/app_routes.dart';
 import '../../../shared/l10n/failure_message.dart';
 import '../../auth/domain/auth_user.dart';
 import '../../auth/presentation/providers/auth_providers.dart';
-import '../../auth/presentation/providers/sign_in_controller.dart';
 
 class ProfileScreen extends ConsumerWidget {
   const ProfileScreen({super.key});
@@ -131,7 +130,8 @@ class _UserCard extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final l10n = AppLocalizations.of(context);
-    final signInState = ref.watch(signInControllerProvider);
+    final router = GoRouter.of(context);
+    final messenger = ScaffoldMessenger.of(context);
 
     return Card(
       child: Padding(
@@ -157,25 +157,19 @@ class _UserCard extends ConsumerWidget {
               ),
             const SizedBox(height: 16),
             OutlinedButton.icon(
-              onPressed: signInState.isLoading
-                  ? null
-                  : () async {
-                      await ref
-                          .read(signInControllerProvider.notifier)
-                          .signOut();
-                      if (context.mounted) {
-                        final error = ref
-                            .read(signInControllerProvider)
-                            .error;
-                        if (error != null) {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Text(failureMessage(context, error)),
-                            ),
-                          );
-                        }
-                      }
-                    },
+              onPressed: () async {
+                try {
+                  await ref.read(authRepositoryProvider).signOut();
+                  router.go(AppRoutes.login);
+                } catch (error) {
+                  final message = context.mounted
+                      ? failureMessage(context, error)
+                      : l10n.errorGeneric;
+                  messenger.showSnackBar(
+                    SnackBar(content: Text(message)),
+                  );
+                }
+              },
               icon: const Icon(Icons.logout),
               label: Text(l10n.signOut),
             ),

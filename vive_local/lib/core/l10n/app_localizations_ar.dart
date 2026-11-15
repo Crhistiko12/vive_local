@@ -29,6 +29,19 @@ class AppLocalizationsAr extends AppLocalizations {
       'احفظ المفضلة، وانشر الأماكن، واستقبل تنبيهات الفعاليات القريبة.';
 
   @override
+  String get welcomeTitle => 'مرحبًا بك في ViveLocal';
+
+  @override
+  String get welcomeSubtitle =>
+      'اكتشف أفضل الأماكن في Cochabamba، وشاركها مع المجتمع واحفظها لزيارتها متى شئت.';
+
+  @override
+  String get getStarted => 'ابدأ';
+
+  @override
+  String get signOutConfirmation => 'هل أنت متأكد أنك تريد تسجيل الخروج؟';
+
+  @override
   String get orDivider => 'أو';
 
   @override
